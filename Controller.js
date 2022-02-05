@@ -99,7 +99,7 @@ app.get('/ofertaservicos', async(req, res)=>{
 
 // alterar serviço com put
 
-app.put('/atualizaservico', async(req,res)=>{
+app.put('/atualizaservico/:id', async(req,res)=>{
     await servico.update(req.body,{
         where: {id: req.body.id}
     }).then(function(){
@@ -576,7 +576,7 @@ app.get('/listaprodutos', async(req, res)=>{
 
 // alterar produto com put
 
-app.put('/atualizaproduto', async(req,res)=>{
+app.put('/atualizaproduto/:id', async(req,res)=>{
     await produto.update(req.body,{
         where: {id: req.body.id}
     }).then(function(){
